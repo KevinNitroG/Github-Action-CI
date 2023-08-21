@@ -17,4 +17,4 @@ jobs:
         runs-on: ubuntu-latest
         continue-on-error: false
         steps:
-          - run: echo hi
+            - run: echo hi

@@ -1,0 +1,24 @@
+name: Cleanup Releases & Tags
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: "0 0 * * 1"
+    watch:
+        types: [started]
+
+permissions: write-all
+
+env:
+    GITHUB_TOKEN: ${{ secrets.TOKEN }}
+
+jobs:
+    Cleanup_Releases_and_Tags:
+        runs-on: ubuntu-latest
+        continue-on-error: false
+        steps:
+            - uses: dev-drprasad/delete-older-releases@master
+              with:
+                  repo: KevinNitroG/RV-RVX-auto-build
+                  keep_latest: 5
+                  delete_tags: true
