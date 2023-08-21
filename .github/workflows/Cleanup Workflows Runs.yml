@@ -1,0 +1,15 @@
+name: Refresh Token
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: "0 0 * * *"
+    watch:
+        types: [started]
+
+permissions: write-all
+
+jobs:
+    Hi:
+        runs-on: ubuntu-latest
+        continue-on-error: true
