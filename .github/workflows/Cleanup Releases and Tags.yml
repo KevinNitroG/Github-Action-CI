@@ -19,6 +19,6 @@ jobs:
         steps:
             - uses: dev-drprasad/delete-older-releases@master
               with:
-                  repo: KevinNitroG/RV-RVX-auto-build
+                  repo: KevinNitroG/ReVanced-auto-build
                   keep_latest: 5
                   delete_tags: true
