@@ -48,3 +48,11 @@ jobs:
                   repository: KevinNitroG/Entertainment
                   retain_days: 15
                   keep_minimum_runs: 6
+
+            - name: ReVanced-auto-build
+              uses: Mattraks/delete-workflow-runs@main
+              with:
+                  token: ${{ env.TOKEN }}
+                  repository: KevinNitroG/Entertainment
+                  retain_days: 15
+                  keep_minimum_runs: 6
