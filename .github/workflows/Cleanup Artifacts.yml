@@ -15,6 +15,6 @@ env:
 jobs:
     Cleanup_Artifacts:
         runs-on: ubuntu-latest
-        continue-on-error: false
+        continue-on-error: true
         steps:
             - run: echo hi

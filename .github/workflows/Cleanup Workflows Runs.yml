@@ -15,7 +15,7 @@ env:
 jobs:
     Cleanup_Workflows_Runs:
         runs-on: ubuntu-latest
-        continue-on-error: false
+        continue-on-error: true
         steps:
             - name: This repo itself
               uses: Mattraks/delete-workflow-runs@main
@@ -33,13 +33,13 @@ jobs:
                   retain_days: 15
                   keep_minimum_runs: 6
 
-            - name: MSO_E5_Dev_AutoRenew_GA
-              uses: Mattraks/delete-workflow-runs@main
-              with:
-                  token: ${{ env.TOKEN }}
-                  repository: KevinNitroG/MSO_E5_Dev_AutoRenew_GA
-                  retain_days: 7
-                  keep_minimum_runs: 6
+            # - name: MSO_E5_Dev_AutoRenew_GA
+            #   uses: Mattraks/delete-workflow-runs@main
+            #   with:
+            #       token: ${{ env.TOKEN }}
+            #       repository: KevinNitroG/MSO_E5_Dev_AutoRenew_GA
+            #       retain_days: 7
+            #       keep_minimum_runs: 6
 
             - name: Entertainment
               uses: Mattraks/delete-workflow-runs@main
