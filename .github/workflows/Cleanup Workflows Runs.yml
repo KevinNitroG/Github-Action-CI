@@ -25,11 +25,19 @@ jobs:
                   retain_days: 60
                   keep_minimum_runs: 6
 
-            - name: Rclone-Auto-Refresh-Token
+            # - name: Rclone-Auto-Refresh-Token
+            #   uses: Mattraks/delete-workflow-runs@main
+            #   with:
+            #       token: ${{ env.TOKEN }}
+            #       repository: KevinNitroG/Rclone-Auto-Refresh-Token
+            #       retain_days: 15
+            #       keep_minimum_runs: 6
+
+            - name: Rclone-Auto-Refresh-Token - self-hosted
               uses: Mattraks/delete-workflow-runs@main
               with:
                   token: ${{ env.TOKEN }}
-                  repository: KevinNitroG/Rclone-Auto-Refresh-Token
+                  repository: Kev-Self-Hosted/Rclone-Auto-Refresh-Token
                   retain_days: 15
                   keep_minimum_runs: 6
 
@@ -55,4 +63,12 @@ jobs:
                   token: ${{ env.TOKEN }}
                   repository: KevinNitroG/Entertainment
                   retain_days: 15
+                  keep_minimum_runs: 6
+
+            - name: MSO_E5_Dev_AutoRenew_GA - self-hosted
+              uses: Mattraks/delete-workflow-runs@main
+              with:
+                  token: ${{ env.TOKEN }}
+                  repository: Kev-Self-Hosted/I-faive-rinew
+                  retain_days: 7
                   keep_minimum_runs: 6
