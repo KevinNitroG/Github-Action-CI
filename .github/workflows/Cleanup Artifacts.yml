@@ -1,20 +1,20 @@
 name: Cleanup Artifacts
 
 on:
-    workflow_dispatch:
-    # schedule:
-    #     - cron: "0 0 * * 1"
-    # watch:
-    #     types: [started]
+  workflow_dispatch:
+  # schedule:
+  #     - cron: "0 0 * * 1"
+  # watch:
+  #     types: [started]
 
 permissions: write-all
 
 env:
-    TOKEN: ${{ github.token }}
+  TOKEN: ${{ github.token }}
 
 jobs:
-    Cleanup_Artifacts:
-        runs-on: ubuntu-latest
-        continue-on-error: true
-        steps:
-            - run: echo hi
+  Cleanup_Artifacts:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - run: echo hi
