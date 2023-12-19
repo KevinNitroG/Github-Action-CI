@@ -80,3 +80,12 @@ jobs:
           repository: KevinNitroG/E5-Restore
           retain_days: 7
           keep_minimum_runs: 6
+
+      
+      - name: KevinNitroG
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          token: ${{ env.TOKEN }}
+          repository: KevinNitroG/KevinNitroG
+          retain_days: 30
+          keep_minimum_runs: 30
